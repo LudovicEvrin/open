@@ -35,7 +35,7 @@ func addHandler(w http.ResponseWriter, r *http.Request) {
 	num2, err2 := strconv.Atoi(num2Str)
 
 	if err1 != nil || err2 != nil {
-		http.Error(w, "Attention ! Les entrées doivent être des nombres valides.", http.StatusBadRequest)
+		http.Error(w, "Attention Erreur ! Les entrées doivent être des nombres valides.", http.StatusBadRequest)
 		return
 	}
 
