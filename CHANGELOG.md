@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/LudovicEvrin/open/compare/v1.0.0...v1.0.1) (2024-10-16)
+
+
+### Bug Fixes
+
+* spell correctly title ([982de8a](https://github.com/LudovicEvrin/open/commit/982de8ab0a92260a3f5f3eb35eb11cd928506f27))
+
 # 1.0.0 (2024-10-16)
 
 
