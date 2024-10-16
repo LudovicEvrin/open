@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/LudovicEvrin/open/compare/v1.1.0...v2.0.0) (2024-10-16)
+
+
+### Features
+
+* alter second placeholder ([223497a](https://github.com/LudovicEvrin/open/commit/223497ac99d99f6a59c602074275be4dfd3c17f8))
+
+
+### BREAKING CHANGES
+
+* modify placeholder
+
 # [1.1.0](https://github.com/LudovicEvrin/open/compare/v1.0.1...v1.1.0) (2024-10-16)
 
 
