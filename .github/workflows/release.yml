@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Check Semantic Release Installation
-        run: npx semantic-release --version  
+      - name: Fix Permissions
+        run: chmod +x ./node_modules/.bin/semantic-release
 
       - name: Semantic Release
         env:
