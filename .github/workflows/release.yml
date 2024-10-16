@@ -10,31 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GH_TOKEN }} # Assurez-vous que GH_TOKEN est défini comme secret
+          token: ${{ secrets.GH_TOKEN }}
 
-      # Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20.18.0'
 
-      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Configure Git to Use PAT
       - name: Set up Git to Use PAT
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/LudovicEvrin/open.git
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/LudovicEvrin/open.git
 
-      # Run Semantic Release
+      - name: Fix Permissions
+        run: chmod +x ./node_modules/.bin/semantic-release
+
       - name: Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # Utiliser le PAT ici aussi
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
